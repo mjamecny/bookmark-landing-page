@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/bookmark-landing-page-with-styledcomponents-uosx6BMCl1)
 - Live Site URL: [Netlify](https://fm-challenge-bookmark-landing-p.netlify.app)
 
 ## My process
