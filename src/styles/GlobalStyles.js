@@ -27,6 +27,10 @@ body {
   font-size: 1.8rem;
 }
 
+#root {
+  position: relative;
+}
+
 input,
 button,
 textarea,
