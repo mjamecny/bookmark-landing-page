@@ -1,20 +1,25 @@
 import styled, { css } from "styled-components"
 
-export default function Logo({ footer }) {
-  const StyledLogo = styled.div`
-    color: var(--color-dark-blue);
-    display: flex;
-    align-items: center;
+const StyledLogo = styled.div`
+  color: var(--color-dark-blue);
+  display: flex;
+  align-items: center;
 
-    ${(props) =>
-      props.footer &&
-      css`
-        color: #fff;
-      `}
-  `
+  ${(props) =>
+    props.footer &&
+    css`
+      color: #fff;
+    `}
 
+  ${(props) =>
+    props.mobile &&
+    css`
+      color: #fff;
+    `}
+`
+export default function Logo({ footer, mobile }) {
   return (
-    <StyledLogo footer={footer}>
+    <StyledLogo footer={footer} mobile={mobile}>
       <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
         <g fill="none" fill-rule="evenodd">
           <path
@@ -22,13 +27,23 @@ export default function Logo({ footer }) {
             fill="currentColor"
             fill-rule="nonzero"
           />
-          <g>
-            <circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5" />
-            <path
-              d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
-              fill="#FFF"
-            />
-          </g>
+          {mobile ? (
+            <g>
+              <circle fill="#fff" cx="12.5" cy="12.5" r="12.5" />
+              <path
+                d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
+                fill="var(--color-dark-blue)"
+              />
+            </g>
+          ) : (
+            <g>
+              <circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5" />
+              <path
+                d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
+                fill="#FFF"
+              />
+            </g>
+          )}
         </g>
       </svg>
     </StyledLogo>
