@@ -1,66 +1,66 @@
 import styled from "styled-components"
 import Logo from "./ui/Logo"
 
+const StyledFooter = styled.section`
+  background-color: var(--color-dark-blue);
+  padding-block: 4.8rem;
+`
+
+const FooterContainer = styled.div`
+  max-width: 120rem;
+  margin: 0 auto;
+  padding-inline: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+
+  @media (min-width: 48em) {
+    flex-direction: row;
+  }
+`
+
+const FooterNavList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+
+  @media (min-width: 48em) {
+    flex-direction: row;
+  }
+`
+
+const FooterNavLink = styled.a`
+  text-transform: uppercase;
+  color: var(--color-grayish-blue);
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--color-soft-red);
+  }
+`
+
+const SocialLinksContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+
+  @media (min-width: 48em) {
+    margin-left: auto;
+  }
+`
+
+const SocialLink = styled.a`
+  color: #fff;
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--color-soft-red);
+  }
+`
+
 export default function Footer() {
-  const StyledFooter = styled.section`
-    background-color: var(--color-dark-blue);
-    padding-block: 4.8rem;
-  `
-
-  const FooterContainer = styled.div`
-    max-width: 120rem;
-    margin: 0 auto;
-    padding-inline: 1.6rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3.2rem;
-
-    @media (min-width: 48em) {
-      flex-direction: row;
-    }
-  `
-
-  const FooterNavList = styled.ul`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2.4rem;
-
-    @media (min-width: 48em) {
-      flex-direction: row;
-    }
-  `
-
-  const FooterNavLink = styled.a`
-    text-transform: uppercase;
-    color: var(--color-grayish-blue);
-    transition: color 0.3s;
-
-    &:hover {
-      color: var(--color-soft-red);
-    }
-  `
-
-  const SocialLinksContainer = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 3.2rem;
-
-    @media (min-width: 48em) {
-      margin-left: auto;
-    }
-  `
-
-  const SocialLink = styled.a`
-    color: #fff;
-    transition: color 0.3s;
-
-    &:hover {
-      color: var(--color-soft-red);
-    }
-  `
-
   return (
     <StyledFooter>
       <FooterContainer>
